@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <img src="assets/images/logo.png" alt="Universitat Oberta de Catalunya" class="uoc-logo">
-    <h1 class="uoc-title">Hello, UOC!</h1>
-    <p>
-      This is a starter template for the Advanced HTML and CSS Tools courses
-      from the Master's Program in Multimedia Applications and the Master's
-      Program in Web App and Website Development at the Universitat Oberta de
-      Catalunya.
-    </p>
-    <i class="fas fa-university"></i>
 
-    <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>UOC Boilerplate</title>
+</head>
+
+<body class="page">
+  <header class="flex flex--border-bottom">
+    <div class="cv-heading">
+      <span class="cv-heading__primary-text">Omar Adolfo Álvarez Hernández</span>
+      <span class="cv-heading__primary-text cv-heading__primary-text--sub">Desarrollador FullStack</span>
+    </div>
+    <img class="cv-header__profile-photo" src="assets/images/omar.png">
+  </header>
+  <main class="flex">
+    <section class="cv-body-section">
+      <div class="cv-heading">
+        <span class="cv-heading__seconday-text">Formación académica</span>
+        <hr class="cv-heading__underline">
+      </div>
+      <article class='cv-body-experience'>
+        <div class='cv-body-experience__img-organization'>
+          <img class='cv-body-experience__img' src="./assets/images/uoc.png"
+            alt="Logo de la Universitat Oberta de Catalunya">
+        </div>
+        <div class="cv-body-experience__description">
+          <p>Universitat Oberta de Catalunya</p>
+          <p>2018 - Actualidad</p>
+          <p>Nota media: </p>
+        </div>
+      </article>
+      <article class='cv-body-experience'>
+        <div class='cv-body-experience__img-organization'>
+          <img class='cv-body-experience__img' src="./assets/images/ull.png" alt="Logo de la Universidad de La Laguna">
+        </div>
+        <div class="cv-body-experience__description">
+          <p>Universidad de La Laguna</p>
+          <p>2013 - 2017</p>
+          <p>Nota media: </p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="flex flex--grey flex--border-top">
+    <a class="cv-footer__link" href="https://www.instagram.com/omaraah95/?hl=es"><i
+        class="fab fa-instagram fa-3x"></i></a>
+    <a class="cv-footer__link" href="https://www.facebook.com/omar.alvarezhernandez.5?ref=bookmarks"><i
+        class="fab fa-facebook fa-3x"></i></a>
+    <a class="cv-footer__link" href="https://www.linkedin.com/in/omar-adolfo-%C3%A1lvarez-hern%C3%A1ndez-66aa65151/"><i
+        class="fab fa-linkedin fa-3x"></i></a>
+    <a class="cv-footer__link" href="https://twitter.com/18Omar11Alvarez"><i class="fab fa-twitter fa-3x"></i></a>
+    <a class="cv-footer__link" href="https://github.com/OmarAdolfo"><i class="fab fa-github fa-3x"></i></a>
+  </footer>
+
+  <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

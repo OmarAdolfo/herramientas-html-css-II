@@ -1,21 +1,111 @@
-body {
-  margin: 0;
-  padding: 30px;
-  font-family: $font-family-sans-serif;
-  background-color: lighten($uoc-masterbrand, 25%);
-  color: $uoc-corporate;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet');
+
+.page {
+  margin: 25px 50px;
+  font-family: 'Open Sans', sans-serif;
+  color: #424242;
+  background-color: whitesmoke;
+  border: 5px solid black;
 }
 
-.uoc-logo {
+.cv-header__profile-photo {
+  border: 5px solid black;
+  max-width: 150px;
+}
+
+/* Encabezados */
+
+.cv-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cv-heading__primary-text {
+  font-size: 48px;
   display: block;
-  margin-bottom: 20px;
-  max-width: 300px;
-  height: auto;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
+.cv-heading__primary-text--sub {
   font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
 }
+
+.cv-heading__seconday-text {
+  font-size: 28px;
+}
+
+.cv-heading__underline {
+  border: none;
+  height: 1px;
+  background-color: #bdbdbd;
+}
+
+/* Pie de página */
+
+.cv-footer__link {
+  color: black;
+}
+
+.cv-body-section {
+  width: 40%;
+}
+
+.cv-body-experience {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cv-body-experience__title {
+  /* border-bottom: 1px solid black; */
+}
+
+.cv-body-experience__img-organization {
+  width: 33%;
+}
+
+.cv-body-experience__img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.cv-body-experience__description {
+  width: 66%;
+}
+
+.cv-separator {
+  border-top: 1px dashed #8c8b8b;
+}
+
+/* Layout */
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+
+  &--grey {
+    background-color: lightgray;
+  }
+
+  &--border-bottom {
+    border-bottom: 25px solid #EEEEEE;
+  }
+
+  &--border-top {
+    border-top: 5px solid black;
+  }
+
+}
+
+
+
+
+
+

@@ -1,96 +1,164 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet');
-
 .page {
-  margin: 25px 50px;
   font-family: 'Open Sans', sans-serif;
   color: #424242;
-  background-color: whitesmoke;
-  border: 5px solid black;
+  background: linear-gradient(135deg,#bdbdbd ,#9e9e9e 50%,#e0e0e0 0, #e0e0e0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-.cv-header__profile-photo {
+.cv {
+  margin: 25px 25px;
   border: 5px solid black;
-  max-width: 150px;
+  background-color: whitesmoke;
+}
+
+.cv-skills {
+  margin: 0 200px;
+
+  @media only screen and (max-width: 780px) {
+    margin: 0 10px;
+  }
 }
 
 /* Encabezados */
 
+@function font-size-medium($n) {
+  @return $n - 5;
+}
+
 .cv-heading {
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 10px;
+  margin: 30px;
+
+  &__primary-text {
+    font-size: 44px;
+    display: block;
+    @media only screen and (max-width: 780px) {
+      font-size: font-size-medium(44);
+    }
+    @media only screen and (max-width: 320px) {
+      font-size: 29px;
+    }
+  }
+
+  &__secondary-text {
+    font-size: 24px;
+    @media only screen and (max-width: 780px) {
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 320px) {
+      font-size: 20px;
+    }
+
+    &--underline {
+      border-bottom: 1px solid #bdbdbd;
+    }
+  }
+
 }
 
-.cv-heading__primary-text {
-  font-size: 48px;
+.cv-personal-information {
+  text-align: justify;
+  padding: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
   display: block;
-}
+  max-width: 50%;
 
-.cv-heading__primary-text--sub {
-  font-size: 36px;
-}
+  &__item {
+    margin-bottom: 20px;
+  }
 
-.cv-heading__seconday-text {
-  font-size: 28px;
-}
-
-.cv-heading__underline {
-  border: none;
-  height: 1px;
-  background-color: #bdbdbd;
 }
 
 /* Pie de página */
 
-.cv-footer__link {
+.cv-link {
   color: black;
 }
 
-.cv-body-section {
-  width: 40%;
-}
-
-.cv-body-experience {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.cv-body-experience__title {
-  /* border-bottom: 1px solid black; */
-}
-
-.cv-body-experience__img-organization {
-  width: 33%;
-}
-
 .cv-body-experience__img {
-  width: 50%;
+  max-width: 75%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
 }
 
-.cv-body-experience__description {
-  width: 66%;
+.cv-profile-photo {
+  border: 5px solid black;
+  max-width: 150px;
 }
 
 .cv-separator {
   border-top: 1px dashed #8c8b8b;
 }
 
-/* Layout */
+.cv-summary {
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  border-left: 3px solid lightgray;
+
+  @media only screen and (max-width: 780px) {
+    border: 0;
+  }
+
+  &__title {
+    color: #5E9DC0;
+    font-weight: 750;
+  }
+
+  &__date-range {
+    font-size: small;
+    color: grey;
+  }
+  
+}
+
+.cv-tag {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  background-color: #444444;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  max-width: 200px;
+
+  &--blue {
+    background-color: #6dcff6;
+  }
+
+  &--green {
+    background-color: #c4df9b;
+  }
+
+  &--green {
+    background-color: #c4df9b;
+  }
+
+  &--pink {
+    background-color: #f06eaa;
+  }
+
+  &--orange {
+    background-color: #D86E10;
+  }
+}
+
+.cv-section {
   padding: 10px;
   text-align: center;
-  margin: 0 auto;
 
-  &--grey {
+  &--background-grey {
     background-color: lightgray;
   }
 
@@ -104,8 +172,36 @@
 
 }
 
+/* Layout */
 
+@function column-width($col) {  
+  @return percentage($col / 12);  
+}
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 
+  &--center {
+    justify-content: center;
+  }
+  
+  &--space-around {
+    justify-content: space-around;
+  }
 
+  &__item {
+    box-sizing: border-box;
+    width: 100%;
 
+    @for $i from 1 through $total {  
+      &--#{$i} { 
+        @media only screen and (min-width: 780px) {
+          width: column-width($i) 
+        }
+      };  
+    }
+
+  }
+
+}

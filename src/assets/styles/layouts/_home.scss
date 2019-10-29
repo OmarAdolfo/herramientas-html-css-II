@@ -2,7 +2,8 @@
   @return $px solid $color;
 }
 
-/* BODY */
+/* FULL PAGE */
+
 .page {
   font-family: $font-family-open-sans;
   color: $color-black;
@@ -38,6 +39,14 @@
     justify-content: space-around;
   }
 
+  &--direction-column {
+    flex-direction: column;
+  }
+
+  &--align-items-center {
+    align-items: center;
+  }
+
   &__item {
     box-sizing: border-box;
     width: 100%;
@@ -54,30 +63,25 @@
 
 /* ELEMENTOS DEL CURRICULUM */
 
-.cv-section {
-  padding: 10px;
+.cv-header {
+  padding-bottom: 25px;
+  border-bottom: generate-border(25px, $color-beis);
   text-align: center;
+}
 
-  &--background-grey {
-    background-color: lightgray;
-  }
+.cv-footer {
+  padding: 10px;
+  background-color: lightgray;
+  border-top: generate-border(5px, $color-black);
 
-  &--border-bottom {
-    border-bottom: generate-border(25px, $color-beis);
-  }
-
-  &--border-top {
-    border-top: generate-border(5px, $color-black);
+  &__link {
+    color: $color-black;
   }
 }
 
-.cv-summary {
-
-  border-left: 0;
-
-  @media (min-width: 780px) {
-    border-left: generate-border(3px, $color-black);
-  }
+.cv-education {
+  margin-bottom: 50px;
+  text-align: center;
 
   &__title {
     font-weight: 750;
@@ -90,12 +94,33 @@
   }
 }
 
+.cv-skills {
+  margin: 25px auto;
+  max-width: 75%;
+
+  @media only screen and (min-width: 780px) {
+    max-width: 50%;
+  }
+}
+
+.cv-personal-information {
+  margin: 25px auto;
+  max-width: 75%;
+  text-align: justify;
+  line-height: 1.5;
+}
+
 /* CABECERAS */
 
 .cv-heading {
   margin: 30px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+
+  &--left {
+    text-align: left;
+  }
 
   &__primary-text {
     font-size: 29px;
@@ -125,13 +150,15 @@
       border-bottom: generate-border(1px, $color-grey);
     }
   }
-}
 
-/* PÁRRAFOS */
+  &__tertiary-text {
+    font-size: 18px;
 
-.paragraph {
-  padding: 10px;
-  text-align: justify;
+    &--sub {
+      font-size: 16px;
+      color: $color-grey;
+    }
+  }
 }
 
 /* LISTAS */
@@ -142,36 +169,26 @@
   list-style: none;
   text-align: left;
   display: block;
-  max-width: 50%;
+  max-width: 75%;
+
+  @media only screen and (min-width: 780px) {
+    max-width: 50%;
+  }
 
   &__item {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 }
 
-/* Enlaces */
+/* IMÁGENES */
 
-.link {
-  color: $color-black;
-}
-
-.cv-skills {
-  margin: 0 50px;
-}
-
-/* Pie de página */
-
-.cv-body-experience__img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  max-width: 75%;
-  display: block;
-}
-
-.cv-profile-photo {
-  border: generate-border(5px, $color-black);
+.photo {
   max-width: 150px;
+  height: auto;
+
+  &--border {
+    border: generate-border(5px, $color-black);
+  }
 }
 
 /* TAGS */
@@ -202,5 +219,9 @@
 
   &--orange {
     background-color: $color-orange-tag;
+  }
+
+  &--red {
+    background-color: $color-red-tag;
   }
 }

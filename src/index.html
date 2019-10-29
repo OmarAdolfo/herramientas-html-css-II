@@ -13,136 +13,140 @@
 
 <body class="page">
   <div class="cv">
-    <header class="flex flex--center cv-section cv-section--border-bottom">
-      <div class="flex__item cv-heading">
+    <header class="flex flex--direction-column flex--align-items-center cv-header">
+      <div class="cv-heading">
         <span class="cv-heading__primary-text">Omar Adolfo Álvarez Hernández</span>
         <span class="cv-heading__secondary-text">Desarrollador FullStack</span>
       </div>
-      <div class="flex__item">
-        <img class="cv-profile-photo" src="assets/images/omar.png">
-      </div>
+      <img class="photo photo--border" src="assets/images/omar.png">
     </header>
-    <main class="flex cv-section">
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Información personal</span>
-        </div>
-        <p class="paragraph">Mi nombre es Omar y soy desarrollador Full Stack en Arte Consultores
-          Tecnológicos. Además, estudio el Máster
-          en Desarrollo de Sitios y Aplicaciones
-          web en la Universitat Oberta de Cataluña. Mi objetivo es aprender y mejorar cada día dentro del mundo de la
-          programación y el desarrollo web.
-        </p>
-        <p class="paragraph">Me encanta tanto el front-end como el back-end. En el front he trabajado con
-          Angular y todo lo que conlleva su uso: html, css, js, typescript... Para
-          el backend he trabajado con Spring, el cual es un framework muy potente para el lenguaje de programación Java.
-        </p>
-      </section>
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Datos de contacto</span>
-        </div>
-        <ul class="list">
-          <li class="list__item"><i class="fas fa-map"></i> Guía de Isora, Santa Cruz de Tenerife, España</li>
-          <li class="list__item"><i class="fas fa-phone"></i> 610915552</li>
-          <li class="list__item"><i class="fas fa-envelope"></i> oalvher95@gmail.com</li>
-        </ul>
-      </section>
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Experiencia Laboral</span>
-        </div>
-        <article class='flex'>
-          <div class='flex__item flex__item--4'>
-            <img class='cv-body-experience__img' src="./assets/images/arte.png"
-              alt="Logo de la Universitat Oberta de Catalunya">
+    <main class="flex">
+      <div class="flex__item flex__item--4">
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Datos de contacto</span>
           </div>
-          <div class="flex__item flex__item--8 cv-summary">
-            <p class="cv-summary__title">Arte Consultores Tecnológicos</p>
-            <p class="cv-summary__date-range">2017 - Actualidad</p>
-            <span class="tag tag--blue">Programador Senior</span>
+          <ul class="list">
+            <li class="list__item"><i class="fas fa-map"></i> Guía de Isora, Santa Cruz de Tenerife, España</li>
+            <li class="list__item"><i class="fas fa-phone"></i> 610915552</li>
+            <li class="list__item"><i class="fas fa-envelope"></i> oalvher95@gmail.com</li>
+          </ul>
+        </section>
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Formación académica</span>
           </div>
-        </article>
-      </section>
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Formación académica</span>
-        </div>
-        <article class='flex'>
-          <div class='flex__item flex__item--4'>
-            <img class='cv-body-experience__img' src="./assets/images/uoc.png"
-              alt="Logo de la Universitat Oberta de Catalunya">
-          </div>
-          <div class="flex__item flex__item--8 cv-summary">
-            <p class="cv-summary__title">Universitat Oberta de Catalunya</p>
-            <p class="cv-summary__date-range">2018 - Actualidad</p>
+          <article class='flex flex--direction-column flex--align-items-center cv-education'>
+            <img class='photo' src="./assets/images/uoc.png" alt="Logo de la Universitat Oberta de Catalunya">
+            <p class="cv-education__title">Universitat Oberta de Catalunya</p>
+            <p class="cv-education__date-range">2018 - Actualidad</p>
             <span class="tag tag--green">Máster en Desarrollo de Sitios y Aplicaciones
               Web</span>
-          </div>
-        </article>
-        <article class='flex'>
-          <div class='flex__item flex__item--4'>
-            <img class='cv-body-experience__img' src="./assets/images/ull.png"
-              alt="Logo de la Universidad de La Laguna">
-          </div>
-          <div class="flex__item flex__item--8 cv-summary">
-            <p class="cv-summary__title">Universidad de La Laguna</p>
-            <p class="cv-summary__date-range">2013 - 2017</p>
+          </article>
+          <article class='flex flex--direction-column flex--align-items-center cv-education'>
+            <img class='photo' src="./assets/images/ull.png" alt="Logo de la Universidad de La Laguna">
+            <p class="cv-education__title">Universidad de La Laguna</p>
+            <p class="cv-education__date-range">2013 - 2017</p>
             <span class="tag tag--green">Grado en Ingeniería Informática</span>
+          </article>
+        </section>
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Cursos</span>
           </div>
-        </article>
-      </section>
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Cursos</span>
-        </div>
-        <article class='flex'>
-          <div class='flex__item flex__item--4'>
-            <img class='cv-body-experience__img' src="./assets/images/fgull.png"
+          <article class='flex flex--direction-column flex--align-items-center cv-education'>
+            <img class='photo' src="./assets/images/fgull.png"
               alt="Logo de la Fundación General de la Universidad de La Laguna">
-          </div>
-          <div class="flex__item flex__item--8 cv-summary">
-            <p class="cv-summary__title">Fundación General de la Universidad de La Laguna</p>
+            <p class="cv-education__title">Fundación General de la Universidad de La Laguna</p>
             <ul class="list">
               <li class="list__item"><span class="tag tag--pink">Desarrollo web avanzado con HTML5</span></li>
               <li class="list__item"><span class="tag tag--pink">Programación web Javascript</span></li>
               <li class="list__item"><span class="tag tag--pink">Desarrollo web con HTML5</span></li>
               <li class="list__item"><span class="tag tag--pink">Diseño web con CSS3</span></li>
             </ul>
+          </article>
+        </section>
+      </div>
+      <div class="flex__item flex__item--8">
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Información personal</span>
           </div>
-        </article>
-      </section>
-      <section class="flex__item flex__item--6">
-        <div class="cv-heading">
-          <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Habilidades</span>
-        </div>
-        <p class="cv-skills">
-          <span class="tag tag--orange">HTML5</span>
-          <span class="tag tag--orange">CSS3</span>
-          <span class="tag tag--orange">Javascript</span>
-          <span class="tag tag--orange">Typescript</span>
-          <span class="tag tag--orange">npm</span>
-          <span class="tag tag--orange">Java</span>
-          <span class="tag tag--orange">Spring</span>
-          <span class="tag tag--orange">Hibernate</span>
-          <span class="tag tag--orange">PHP</span>
-          <span class="tag tag--orange">OOP</span>
-          <span class="tag tag--orange">Angular</span>
-          <span class="tag tag--orange">Programación reactiva</span>
-          <span class="tag tag--orange">Oracle</span>
-          <span class="tag tag--orange">Postgres</span>
-          <span class="tag tag--orange">SQL</span>
-        </p>
-      </section>
+          <p class="cv-personal-information">Mi nombre es Omar y soy desarrollador Full Stack en Arte Consultores
+            Tecnológicos. Además, estudio el Máster
+            en Desarrollo de Sitios y Aplicaciones
+            web en la Universitat Oberta de Cataluña. Mi objetivo es aprender y mejorar cada día dentro del mundo de la
+            programación y el desarrollo web.
+          </p>
+          <p class="cv-personal-information">Me encanta tanto el front-end como el back-end. En el front he trabajado
+            con
+            Angular y todo lo que conlleva su uso: html, css, js, typescript... Para
+            el backend he trabajado con Spring, el cual es un framework muy potente para el lenguaje de programación
+            Java.
+          </p>
+        </section>
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Experiencia Laboral</span>
+          </div>
+          <article class='flex--direction-column flex--align-items-center'>
+            <ul class="list">
+              <div class="cv-heading cv-heading--left">
+                <span class="cv-heading__tertiary-text">Arte Consultores Tecnológicos</span>
+                <span class="cv-heading__tertiary-text cv-heading__tertiary-text--sub">( 03/2017 - Actualidad )</span>
+              </div>
+              <li class="list__item"><span class="tag tag--blue">05/2018 -
+                  Actualidad</span>Programador Senior</li>
+              <li class="list__item"><span class="tag tag--blue">06/2017 -
+                  04/2018</span>Programador Junior</li>
+              <li class="list__item"><span class="tag tag--blue">03/2017 -
+                  05/2017</span>Prácticas Externas</li>
+            </ul>
+          </article>
+        </section>
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Tecnologías</span>
+          </div>
+          <p class="cv-skills">
+            <span class="tag tag--orange">HTML5</span>
+            <span class="tag tag--orange">CSS3</span>
+            <span class="tag tag--orange">Javascript</span>
+            <span class="tag tag--orange">Typescript</span>
+            <span class="tag tag--orange">npm</span>
+            <span class="tag tag--orange">Java</span>
+            <span class="tag tag--orange">Spring</span>
+            <span class="tag tag--orange">Hibernate</span>
+            <span class="tag tag--orange">PHP</span>
+            <span class="tag tag--orange">OOP</span>
+            <span class="tag tag--orange">Angular</span>
+            <span class="tag tag--orange">Programación reactiva</span>
+            <span class="tag tag--orange">Oracle</span>
+            <span class="tag tag--orange">Postgres</span>
+            <span class="tag tag--orange">SQL</span>
+          </p>
+        </section>
+        <section>
+          <div class="cv-heading">
+            <span class="cv-heading__secondary-text cv-heading__secondary-text--underline">Idiomas</span>
+          </div>
+          <p class="cv-skills">
+            <span class="tag tag--red">Inglés</span>
+            <span class="tag tag--red">Español</span>
+          </p>
+        </section>
+      </div>
     </main>
-    <footer class="flex flex--space-around cv-section cv-section--background-grey cv-section--border-top">
-      <a class="link" href="https://www.instagram.com/omaraah95/?hl=es"><i class="fab fa-instagram fa-3x"></i></a>
-      <a class="link" href="https://www.facebook.com/omar.alvarezhernandez.5?ref=bookmarks"><i
+    <footer class="flex flex--space-around cv-footer">
+      <a class="cv-footer__link" href="https://www.instagram.com/omaraah95/?hl=es"><i
+          class="fab fa-instagram fa-3x"></i></a>
+      <a class="cv-footer__link" href="https://www.facebook.com/omar.alvarezhernandez.5?ref=bookmarks"><i
           class="fab fa-facebook fa-3x"></i></a>
-      <a class="link" href="https://www.linkedin.com/in/omar-adolfo-%C3%A1lvarez-hern%C3%A1ndez-66aa65151/"><i
+      <a class="cv-footer__link"
+        href="https://www.linkedin.com/in/omar-adolfo-%C3%A1lvarez-hern%C3%A1ndez-66aa65151/"><i
           class="fab fa-linkedin fa-3x"></i></a>
-      <a class="link" href="https://twitter.com/18Omar11Alvarez"><i class="fab fa-twitter fa-3x"></i></a>
-      <a class="link" href="https://github.com/OmarAdolfo"><i class="fab fa-github fa-3x"></i></a>
+      <a class="cv-footer__link" href="https://twitter.com/18Omar11Alvarez"><i class="fab fa-twitter fa-3x"></i></a>
+      <a class="cv-footer__link" href="https://github.com/OmarAdolfo"><i class="fab fa-github fa-3x"></i></a>
     </footer>
   </div>
   <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

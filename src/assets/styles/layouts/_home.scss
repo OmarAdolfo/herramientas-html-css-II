@@ -19,6 +19,10 @@
   margin: 25px 25px;
   background-color: $color-white-cv;
   border: generate-border(5px, $color-black);
+
+  @media screen and (min-width: $laptop-viewport) {
+    margin: 25px 150px;
+  }
 }
 
 /* LAYOUT */
@@ -53,7 +57,7 @@
 
     @for $i from 1 through $total {
       &--#{$i} {
-        @media only screen and (min-width: 780px) {
+        @media screen and (min-width: $laptop-viewport) {
           width: column-width($i);
         }
       }
@@ -86,6 +90,7 @@
   &__title {
     font-weight: 750;
     color: $color-title-organization;
+    max-width: 200px;
   }
 
   &__date-range {
@@ -98,7 +103,7 @@
   margin: 25px auto;
   max-width: 75%;
 
-  @media only screen and (min-width: 780px) {
+  @media screen and (min-width: $laptop-viewport) {
     max-width: 50%;
   }
 }
@@ -123,27 +128,20 @@
   }
 
   &__primary-text {
-    font-size: 29px;
+    font-size: 32px;
     display: block;
 
-    @media (min-width: 780px) {
+    @media screen and (min-width: $laptop-viewport) {
       font-size: 44px;
     }
 
-    @media (min-width: 320px) {
-      font-size: 39px;
-    }
   }
 
   &__secondary-text {
     font-size: 20px;
 
-    @media (min-width: 780px) {
+    @media screen and (min-width: $laptop-viewport) {
       font-size: 24px;
-    }
-
-    @media (min-width: 320px) {
-      font-size: 22px;
     }
 
     &--underline {
@@ -171,7 +169,7 @@
   display: block;
   max-width: 75%;
 
-  @media only screen and (min-width: 780px) {
+  @media screen and (min-width: $laptop-viewport) {
     max-width: 50%;
   }
 

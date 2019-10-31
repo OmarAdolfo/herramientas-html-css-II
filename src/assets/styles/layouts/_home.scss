@@ -2,18 +2,18 @@
   @return $px solid $color;
 }
 
-/* FULL PAGE */
+/* Clase que pertenece body y permite definir el fondo del curriculum */
 
 .page {
+  min-height: 100vh;
   font-family: $font-family-open-sans;
   color: $color-black;
   background: linear-gradient(135deg, $color-grey, #9e9e9e 50%, #e0e0e0 0, #e0e0e0);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
 }
 
-/* PÁGINA DE CURRICULUM */
+/* Clase que hace referncia a la página donde es escrito el curriculum */
 
 .cv {
   margin: 25px 25px;
@@ -25,7 +25,7 @@
   }
 }
 
-/* LAYOUT */
+/* Clase utilitaria que nos permite aportar la propiedad flex y hacer responsiva la organización de la misma */
 
 @function column-width($col) {
   @return percentage($col / 12);
@@ -65,12 +65,12 @@
   }
 }
 
-/* ELEMENTOS DEL CURRICULUM */
+/* Elementos del curriculum como son la cabecera, el pie de página, la educación, ... */
 
 .cv-header {
   padding-bottom: 25px;
-  border-bottom: generate-border(25px, $color-beis);
   text-align: center;
+  border-bottom: generate-border(25px, $color-beis);
 }
 
 .cv-footer {
@@ -88,9 +88,9 @@
   text-align: center;
 
   &__title {
+    max-width: 200px;
     font-weight: 750;
     color: $color-title-organization;
-    max-width: 200px;
   }
 
   &__date-range {
@@ -100,8 +100,8 @@
 }
 
 .cv-skills {
-  margin: 25px auto;
   max-width: 75%;
+  margin: 25px auto;
 
   @media screen and (min-width: $laptop-viewport) {
     max-width: 50%;
@@ -109,32 +109,31 @@
 }
 
 .cv-personal-information {
-  margin: 25px auto;
   max-width: 75%;
-  text-align: justify;
+  margin: 25px auto;
   line-height: 1.5;
+  text-align: justify;
 }
 
-/* CABECERAS */
+/* Permite definir las cabeceras de las diferentes secciones de la página */
 
 .cv-heading {
   margin: 30px;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 
   &--left {
     text-align: left;
   }
 
   &__primary-text {
-    font-size: 32px;
     display: block;
+    font-size: 32px;
 
     @media screen and (min-width: $laptop-viewport) {
       font-size: 44px;
     }
-
   }
 
   &__secondary-text {
@@ -159,15 +158,15 @@
   }
 }
 
-/* LISTAS */
+/* Clase para aplicar estilos iguales a las etiquetas que representen un listado */
 
 .list {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  text-align: left;
   display: block;
   max-width: 75%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
 
   @media screen and (min-width: $laptop-viewport) {
     max-width: 50%;
@@ -178,7 +177,7 @@
   }
 }
 
-/* IMÁGENES */
+/* Clase que se aplica a las diferentes imágenes del curriculum */
 
 .photo {
   max-width: 150px;
@@ -189,20 +188,20 @@
   }
 }
 
-/* TAGS */
+/* Clase que nos permite definir pequeñas etiquetas de diferentes colores con mensajes escuetos */
 
 .tag {
+  display: inline-block;
+  max-width: 200px;
   padding: 5px;
   margin: 5px;
   font-size: 0.75em;
   font-weight: 700;
+  color: $color-black;
+  text-transform: uppercase;
   background-color: $color-black;
   border-radius: 3px;
-  text-transform: uppercase;
-  color: $color-black;
-  display: inline-block;
-  max-width: 200px;
-
+  
   &--blue {
     background-color: $color-blue-tag;
   }

@@ -55,7 +55,7 @@
     box-sizing: border-box;
     width: 100%;
 
-    @for $i from 1 through $total {
+    @for $i from 1 through $num-total-col {
       &--#{$i} {
         @media screen and (min-width: $laptop-viewport) {
           width: column-width($i);

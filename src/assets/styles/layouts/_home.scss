@@ -13,9 +13,9 @@
   background-size: cover;
 }
 
-/* Clase que hace referncia a la página donde es escrito el curriculum */
+/* Clase que hace referencia al folio donde está escrito el curriculum */
 
-.cv {
+.invoice {
   margin: 25px 25px;
   background-color: $color-white-cv;
   border: generate-border(5px, $color-black);
@@ -108,7 +108,9 @@
   }
 }
 
-.cv-personal-information {
+/* Clase que representa los estilos aplicados a un párrafo */
+
+.paragraph {
   max-width: 75%;
   margin: 25px auto;
   line-height: 1.5;
@@ -117,7 +119,7 @@
 
 /* Permite definir las cabeceras de las diferentes secciones de la página */
 
-.cv-heading {
+.heading {
   margin: 30px;
   font-weight: bold;
   text-align: center;
